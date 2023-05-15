@@ -20,7 +20,8 @@ Application tester  tool
 
 The tool should enable the application managers to report the function status of an application in an uncomplicated way. 
  
-![image](https://github.com/Philinger1/Apptester/assets/96050818/891d5a13-6d2e-4563-9ecc-560ac6da05bc)
+![image](https://github.com/Philinger1/Apptester/assets/96050818/b0692219-d064-4c52-8dda-0881e8fb77b2)
+
 
 ## Description
 The tool is written in Powershell and will converted to a executable file for the deployment. It displays all applications assigned via SCCM in a list. Optionally, the list can be filtered so that the app manager only sees the applications for which he is responsible. Via some radio buttons and a description field he can capture the status and make some notes in the descriptions field.
