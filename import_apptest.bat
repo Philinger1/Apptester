@@ -1,0 +1,1 @@
+mofcomp "\\domoff.local\configmgr\APPS\tools\Apptester\SCCM\clientsettings_import.mof"

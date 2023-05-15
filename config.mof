@@ -1,0 +1,25 @@
+// RegKeyToMOF by Mark Cochrane (with help from Skissinger, SteveRac, Jonas Hettich, Kent Agerlund & Barker)
+// this section tells the inventory agent what to collect
+// 2/2/2023 1:21:15 AM
+
+#pragma namespace ("\\\\.\\root\\cimv2")
+#pragma deleteclass("Apptest", NOFAIL)
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Apptest")]
+Class Apptest
+{
+[key] string KeyName;
+[PropertyContext("Status")] Uint32 Status;
+[PropertyContext("Description")] String Description;
+[PropertyContext("User")] String User;
+};
+
+#pragma namespace ("\\\\.\\root\\cimv2")
+#pragma deleteclass("Apptest_64", NOFAIL)
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Apptest")]
+Class Apptest_64
+{
+[key] string KeyName;
+[PropertyContext("Status")] Uint32 Status;
+[PropertyContext("Description")] String Description;
+[PropertyContext("User")] String User;
+};

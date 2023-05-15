@@ -1,0 +1,13 @@
+#PRAGMA AUTORECOVER
+#pragma namespace ("\\\\.\\root\\cimv2")
+#pragma deleteclass("Apptest_64", NOFAIL)
+
+
+[dynamic: ToInstance, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Swissgrid\\Apptest")]
+class Apptest_64
+{
+	[key] string KeyName;
+	[PropertyContext("Status")] Uint32 Status;
+	[PropertyContext("Description")] String Description;
+	[PropertyContext("User")] String User;
+};
