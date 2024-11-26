@@ -5,7 +5,7 @@
 ### Requirements
 -	SCCM-Agent (WMI-Data), 
 -	Exported Helpline-CSV in this format: packagename;userid
--	Right-Permission in registry: HKLM:\Software\Swissgrid\Apptest
+-	Right-Permission in registry: HKLM:\Software\EPinsight\Apptest
 -	Setup SCCM inventoy mof-File:
 o	configurationmof 
 o	client settings
@@ -29,7 +29,7 @@ There are three states:
 •	1= perfect
 •	2=not working
 •	3=works with problems
-Filter by Application Manager > data export done by Koch, Marcel 
+Filter by Application Manager
 The Filter is an option in the tool it requires a SoftwarePackage.csv in the following format with exported data from helpline: 
 productid;majorversion;manufacturer;productname;softwarename;version;coid;architecture;packagename;userid;name;email
 (see ticket: 20230206-0531)
@@ -43,7 +43,7 @@ In the tool there is a clear function to delete all status settings from the Reg
 
 ## Registry
 The captured settings are stored in the registry. The Registry values are read out automatically by the hardware inventory of SCCM.
-Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Swissgrid\Apptest
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\EPinsight\Apptest
  
 Registry permissions > done by Tokic Silvio
 in order for the tool to have write permission on this reg-key, full permissions have been set via the GPO (“GPO DLT_W10_Clientengineering“)  and assigned.
@@ -57,7 +57,7 @@ So that SCCM can see the data and display it in the report, the extension of the
 
 #pragma namespace ("\\\\.\\root\\cimv2")
 #pragma deleteclass("Apptest", NOFAIL)
-[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Swissgrid\\Apptest")]
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\EPinsight\\Apptest")]
 Class Apptest
 {
 [key] string KeyName;
@@ -68,7 +68,7 @@ Class Apptest
 
 #pragma namespace ("\\\\.\\root\\cimv2")
 #pragma deleteclass("Apptest_64", NOFAIL)
-[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Swissgrid\\Apptest")]
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\EPinsight\\Apptest")]
 Class Apptest_64
 {
 [key] string KeyName;
