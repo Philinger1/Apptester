@@ -4,7 +4,7 @@
 
 #pragma namespace ("\\\\.\\root\\cimv2")
 #pragma deleteclass("Apptest", NOFAIL)
-[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Apptest")]
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\EPinsight\\Apptest")]
 Class Apptest
 {
 [key] string KeyName;
@@ -15,7 +15,7 @@ Class Apptest
 
 #pragma namespace ("\\\\.\\root\\cimv2")
 #pragma deleteclass("Apptest_64", NOFAIL)
-[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Apptest")]
+[dynamic, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\EPinsight\\Apptest")]
 Class Apptest_64
 {
 [key] string KeyName;
