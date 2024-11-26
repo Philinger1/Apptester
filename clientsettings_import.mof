@@ -3,7 +3,7 @@
 #pragma deleteclass("Apptest_64", NOFAIL)
 
 
-[dynamic: ToInstance, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\Swissgrid\\Apptest")]
+[dynamic: ToInstance, provider("RegProv"), ClassContext("Local|HKEY_LOCAL_MACHINE\\SOFTWARE\\EPinsight\\Apptest")]
 class Apptest_64
 {
 	[key] string KeyName;
